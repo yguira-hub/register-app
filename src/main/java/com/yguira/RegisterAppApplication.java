@@ -17,4 +17,9 @@ public class RegisterAppApplication {
     public String home() {
         return "Hello from Register App! This is working!";
     }
+
+    @GetMapping("/register")
+    public String register() {
+        return "User registration form coming soon!";
+    }
 }
