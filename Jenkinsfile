@@ -9,7 +9,7 @@ pipeline {
     environment {
         APP_NAME = 'register-app'
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')  // ID du credential
-        DOCKERHUB_REPO = 'yguira-hub/register-app'  // Ton repo Docker Hub (username/repo)
+        DOCKERHUB_REPO = 'youssraguira/register-app'  // Ton repo Docker Hub (username/repo)
         DOCKER_IMAGE_TAG = "${BUILD_NUMBER}"  // Tag avec le numéro de build
     }
 
