@@ -8,9 +8,9 @@ pipeline {
 
     environment {
         APP_NAME = 'register-app'
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub')  // ID du credential
-        DOCKERHUB_REPO = 'youssraguira/register-app'  // Ton username/repo Docker Hub
-        DOCKER_IMAGE_TAG = "${BUILD_NUMBER}"  // Tag avec le numéro de build
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+        DOCKERHUB_REPO = 'youssraguira/register-app'
+        DOCKER_IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
     stages {
@@ -41,15 +41,14 @@ pipeline {
                 }
             }
         }
-        stage('Scan Docker Image') {
-            steps {
-                sh 'trivy image --exit-code 0 --no-progress $DOCKERHUB_REPO:$DOCKER_IMAGE_TAG'
-            }
-        }
         stage('Build and Push Docker Image') {
             steps {
                 script {
+                    // Construire l'image
                     def dockerImage = docker.build("$DOCKERHUB_REPO:$DOCKER_IMAGE_TAG")
+                    // Scanner l'image avant de la pousser
+                    sh "trivy image --exit-code 0 --no-progress $DOCKERHUB_REPO:$DOCKER_IMAGE_TAG"
+                    // Pousser l'image vers Docker Hub
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
                         dockerImage.push("$DOCKER_IMAGE_TAG")
                         dockerImage.push('latest')
