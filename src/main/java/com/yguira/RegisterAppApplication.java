@@ -1,4 +1,4 @@
-package com.yguira.registerapp; // Ajuste selon ton dossier (ex. com.yguira si différent)
+package com.yguira;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,7 +16,6 @@ public class RegisterAppApplication {
         SpringApplication.run(RegisterAppApplication.class, args);
     }
 
-    // Endpoints existants
     @GetMapping("/")
     public String home() {
         return "Hello from Register App! This is working!";
@@ -27,10 +26,8 @@ public class RegisterAppApplication {
         return "User registration form coming soon!";
     }
 
-    // Configuration Prometheus
     @Bean
     public MeterRegistryCustomizer<PrometheusMeterRegistry> metricsCommonTags() {
         return registry -> registry.config().commonTags("application", "register-app");
     }
 }
-
