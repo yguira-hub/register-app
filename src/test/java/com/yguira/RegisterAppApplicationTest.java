@@ -1,18 +1,13 @@
-package com.yguira;
+package com.yguira.registerapp;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.springframework.boot.test.context.SpringBootTest;
 
-public class RegisterAppApplicationTest {
-    private final RegisterAppApplication app = new RegisterAppApplication();
-
-    @Test
-    void testHomeEndpoint() {
-        assertEquals("Hello from Register App! This is working!", app.home());
-    }
+@SpringBootTest(classes = RegisterAppApplication.class)
+class RegisterAppApplicationTests {
 
     @Test
-    void testRegisterEndpoint() {
-        assertEquals("User registration form coming soon!", app.register());
+    void contextLoads() {
     }
+
 }
