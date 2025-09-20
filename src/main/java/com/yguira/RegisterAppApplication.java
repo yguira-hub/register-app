@@ -1,4 +1,4 @@
-package com.yguira.register-app; // Ajuste selon ton dossier (ex. com.yguira si différent)
+package com.yguira.registerapp; // Ajuste selon ton dossier (ex. com.yguira si différent)
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -33,3 +33,4 @@ public class RegisterAppApplication {
         return registry -> registry.config().commonTags("application", "register-app");
     }
 }
+
