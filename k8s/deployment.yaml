@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: register-app
-        image: youssraguira/register-app:latest
+        image: yguira/register-app:latest # Correction ici : youssraguira -> yguira
         ports:
         - containerPort: 8080
+
