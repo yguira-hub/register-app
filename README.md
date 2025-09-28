@@ -1,10 +1,10 @@
-# Register-App 🚀
+# Register-App 
 
 A **Spring Boot** user registration application, containerized with **Docker** and deployed on a **K3s Kubernetes cluster** with a complete DevOps pipeline.
 
 ---
 
-## 📌 Features
+##  Features
 - Built with **Spring Boot** and packaged using **Maven**.
 - Dockerized for consistent deployment across environments.
 - CI/CD pipeline automated with **Jenkins**.
@@ -16,7 +16,7 @@ A **Spring Boot** user registration application, containerized with **Docker** a
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - **Java 17**
 - **Maven**
 - **Docker**
@@ -29,7 +29,7 @@ A **Spring Boot** user registration application, containerized with **Docker** a
 
 ---
 
-## 🚀 How to Run Locally
+##  How to Run Locally
 1. Clone the repository:
    ```bash
    git clone https://github.com/youssraguira/register-app.git
