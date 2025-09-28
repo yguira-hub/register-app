@@ -10,7 +10,7 @@ A **Spring Boot** user registration application, containerized with **Docker** a
 - CI/CD pipeline automated with **Jenkins**.
 - Static code analysis with **SonarQube**.
 - Security scanning using **Trivy**.
-- Deployed and managed on **K3s (3-node cluster)**.
+- Deployed and managed on **K3s (2-node cluster)**.
 - Continuous delivery with **ArgoCD**.
 - Cluster monitoring with **Prometheus + Grafana** (nodes, CPU, memory).
 
